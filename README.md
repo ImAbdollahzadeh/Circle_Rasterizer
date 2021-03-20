@@ -13,7 +13,7 @@ Please read this tutorial right after ***Triangle_Rasterizer*** tutorial for bet
 
 # Let's get started.
 ## Line-based pixel drawing in C
-In our triangle_Rasterizer, I explained how to start with the top point and approach the side point of a triangle, then for every single step, we draw a horizontal line between two limit point on triangle's borders. For a circle, the strategy is similar. I start with the toppest point on a circle (north pole or the point at tt = 90°) and approach the point at the leftmost (at &theta = 180°) part of the circle. For every single step, I draw a horizontal line in order to cover a semi circle from &theta = 0° to &theta = 180°. I then repeat the same fot angles between 180° to 360°.
+In our triangle_Rasterizer, I explained how to start with the top point and approach the side point of a triangle, then for every single step, we draw a horizontal line between two limit point on triangle's borders. For a circle, the strategy is similar. I start with the toppest point on a circle (north pole or the point at &theta; = 90°) and approach the point at the leftmost (at &theta; = 180°) part of the circle. For every single step, I draw a horizontal line in order to cover a semi circle from &theta; = 0° to &theta = 180°. I then repeat the same fot angles between 180° to 360°.
 
 ## Circles
 
