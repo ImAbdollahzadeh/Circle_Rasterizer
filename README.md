@@ -149,9 +149,9 @@ In function ***accelerated_line_based_xmmword_fillup_circle***, all the calculat
 
 The benchmarking made it clear that ***accelerated_line_based_xmmword_fillup_circle*** is simply 3.8 times faster than ***line_based_dword_fillup_circle***. A single core CPU spent nearly ***0.68 ms*** to paint the represented triangle above with ***line_based_dword_fillup_circle*** and the same with ***0.19 ms*** in ***accelerated_line_based_xmmword_fillup_circle***.
 
-## Some notes on hardware accelerated triangle blit
+## Some notes on hardware accelerated circle blit
 
-Imagine a GPU designed for triangle raterization. This GPU has over 1000 parallel cores. In our *accelerated_line_based_xmmword_fillup_triangle*, there is 
+Imagine a GPU designed for circle raterization. This GPU has over 1000 parallel cores. In our *accelerated_line_based_xmmword_fillup_circle*, there is 
 
 	while (next_y <= left_side_y)
 	{
@@ -161,6 +161,6 @@ Imagine a GPU designed for triangle raterization. This GPU has over 1000 paralle
 	
 Our GPU can break this statement into **dy** cores (if dy < number_of_GPU_cores) and do all calculations in parallel, or into **number_of_GPU_cores** cores (if number_of_GPU_cores < dy) and in some small steps do the whole painting. With this in mind, we see that if dy < number_of_GPU_cores we get dy factor in acceleration and if number_of_GPU_cores < dy, we would get (number_of_GPU_cores * (dy / number_of_GPU_cores)) + (dy % number_of_GPU_cores) factor in acceleration. 
 
-I mentioned at the end of my ***Triangle_Rasterizer tutorial*** that one can draw circles from triangles building blocks and spend nearly 300 msec to draw a large circle. As I also mentioned there, this is not efficient at all. Here I tried to show you that we can draw such a large circle with time below 200 &mu;sec.
+I mentioned at the end of my ***Triangle_Rasterizer*** tutorial that one can draw circles from triangles building blocks and spend nearly 300 msec to draw a large circle. As I also mentioned there, this is not efficient at all. Here I tried to show you that we can draw such a large circle with time below 200 &mu;sec.
 
 # Anti aliasing
