@@ -162,3 +162,5 @@ Imagine a GPU designed for triangle raterization. This GPU has over 1000 paralle
 Our GPU can break this statement into **dy** cores (if dy < number_of_GPU_cores) and do all calculations in parallel, or into **number_of_GPU_cores** cores (if number_of_GPU_cores < dy) and in some small steps do the whole painting. With this in mind, we see that if dy < number_of_GPU_cores we get dy factor in acceleration and if number_of_GPU_cores < dy, we would get (number_of_GPU_cores * (dy / number_of_GPU_cores)) + (dy % number_of_GPU_cores) factor in acceleration. 
 
 I mentioned at the end of my ***Triangle_Rasterizer tutorial*** that one can draw circles from triangles building blocks and spend nearly 300 msec to draw a large circle. As I also mentioned there, this is not efficient at all. Here I tried to show you that we can draw such a large circle with time below 200 &mu;sec.
+
+# Anti aliasing
