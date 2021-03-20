@@ -1,7 +1,7 @@
 # Circle_Rasterizer
 An overview on circle drawing in C/C++ and acceleration with x86-SSE.
 
-Please read this tutorial right after ***Triangle_Rasterizer*** tutorial for better understanding.
+-> Please read this tutorial right after ***Triangle_Rasterizer*** tutorial for better understanding <-
 
 # Prerequisites
 - Knowledge of line-based pixel filling approach (look at *Triangle_Rasterizer* repository)
